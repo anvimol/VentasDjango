@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>
+        Mi primera Pagina Web
+    </h1>
+
+{% block content %}
+    <a href="{% url 'core:vista2' %}">Vista 2</a>
+    <ul>
+        {% for category in categories %}
+            <li>{{ category.id }} / {{ category.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock  %}
     <p>Hola {{ name }}, es una prueba</p>
 </body>
 </html>
