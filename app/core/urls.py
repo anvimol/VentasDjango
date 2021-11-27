@@ -1,10 +1,10 @@
 from django.urls import path
 
-from core.views import myFirstView, mySecondView
+from core.views.category.views import category_list
+
 
 app_name = 'core'
 
 urlpatterns = [
-    path('uno/', myFirstView, name='vista1'),
-    path('dos/', mySecondView, name='vista2'),
+    path('category/list/', category_list, name='vista1'),
 ]
